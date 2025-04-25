@@ -110,7 +110,7 @@ def clean_event_positions(event_positions, mask):
     """
     return event_positions[mask]
 
-def mne_create_info(channel_names, fs, ch_type):
+def create_mne_info(channel_names, fs, ch_type):
     """
     Creates the MNE info object.
     :param channel_names:
@@ -142,6 +142,7 @@ def create_mne_events(event_positions, final_labels):
                             np.zeros(len(final_labels), dtype=int),
                             final_labels))
 
+
 def load_subject_data(filepath: str, ch_type: str):
     data = load_mat_file(filepath)
 
@@ -167,7 +168,7 @@ def load_subject_data(filepath: str, ch_type: str):
 
     fs = extract_sampling_rate(nfo)
 
-    info = mne_create_info(channel_names, fs, ch_type=ch_type)
+    info = create_mne_info(channel_names, fs, ch_type=ch_type)
 
     raw = create_mne_raw(raw_signal=x_raw, mne_info=info)
 
