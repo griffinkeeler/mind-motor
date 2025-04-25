@@ -43,7 +43,7 @@ def extract_csp_features(filepath, ch_type):
 
     x_csp = transform_csp(x_epochs=x, y_epochs=y, csp_object=csp)
 
-    return x_csp, csp
+    return csp, x_csp
 
 
 def main():
