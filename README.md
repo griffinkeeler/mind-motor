@@ -1,2 +1,2 @@
 # Overview
-In this project, I will be using the BCI Competition III Dataset IVa to classify left and right motor imagery.  
+This project explores the use of  Common Spatial Patterns (CSP) and Linear Discriminant Analysis (LDA) to classify EEG signals associated with different motor imagery tasks using the BCI Competition IVa dataset. 
